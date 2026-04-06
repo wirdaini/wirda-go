@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+
+    <!-- LOGIN -->
+    <color name="background_login">#F5F7FA</color>
+    <color name="text_primary">#111111</color>
+    <color name="text_secondary">#7A7A7A</color>
+
+    <!-- INPUT -->
+    <color name="input_background">#EDEDED</color>
+    <color name="input_icon">#9E9E9E</color>
+
+    <!-- BUTTON -->
+    <color name="button_login_start">#8EC5DA</color>
+    <color name="button_login_end">#6EA7BE</color>
+    <color name="button_text">#FFFFFF</color>
+
+    <!-- WELCOME -->
+    <color name="background_welcome">#F5F7FA</color>
+    <color name="background_card">#FFFFFF</color>
+    <color name="divider">#8EC5DA</color>
+    <color name="text_title">#111111</color>
+    <color name="text_subtitle">#777777</color>
+
 </resources>
