@@ -22,4 +22,10 @@
     <color name="text_title">#111111</color>
     <color name="text_subtitle">#777777</color>
 
+    <!-- ===== TOMBOL UNTUK WELCOME ACTIVITY (4 TOMBOL) ===== -->
+    <color name="button_primary">#FF6B6B</color>      <!-- Merah muda untuk Rumus Bangun Ruang -->
+    <color name="button_secondary">#4ECDC4</color>    <!-- Teal/hijau kebiruan untuk Job Board -->
+    <color name="button_accent">#FFE66D</color>       <!-- Kuning untuk Portofolio -->
+    <color name="button_danger">#FF4757</color>       <!-- Merah untuk Logout -->
+
 </resources>

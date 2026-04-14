@@ -12,23 +12,37 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Wirdago"
         tools:targetApi="31">
-        <activity
-            android:name=".pertemuan_3.ThirdResultActivity"
-            android:exported="false" />
-        <activity
-            android:name=".pertemuan_3.WelcomeActivity"
-            android:exported="false" /> <!-- <activity -->
-        <!-- android:name=".pertemuan_3.LoginActivity" -->
-        <!-- android:exported="false" /> -->
+
+        <!-- LAUNCHER ACTIVITY (Halaman pertama saat app dibuka) -->
         <activity
             android:name=".pertemuan_3.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- WELCOME ACTIVITY (Setelah login sukses) -->
+        <activity
+            android:name=".pertemuan_3.WelcomeActivity"
+            android:exported="false" />
+
+        <!-- RUMUS BANGUN RUANG -->
+        <activity
+            android:name=".pertemuan_2.BangunKalkulatorActivity"
+            android:exported="false" />
+
+        <!-- JOB BOARD ACTIVITY -->
+        <activity
+            android:name=".pertemuan_4.JobBoardActivity"
+            android:exported="false" />
+
+        <!-- PORTOFOLIO ACTIVITY -->
+        <activity
+            android:name=".pertemuan_4.PortofolioActivity"
+            android:exported="false" />
+
     </application>
 
 </manifest>

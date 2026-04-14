@@ -1,25 +1,33 @@
 <resources>
 
-<!-- APP -->
-<string name="app_name">wirda-go</string>
+    <!-- APP -->
+    <string name="app_name">wirda-go</string>
 
-<!-- LOGIN -->
-<string name="login_title">Welcome back!</string>
-<string name="login_subtitle">Masuk ke akun WorkWave untuk lanjut cari cuan</string>
-<string name="hint_username">Username</string>
-<string name="hint_password">Password</string>
-<string name="forgot_password">Forgot Password?</string>
-<string name="btn_login">LOG IN</string>
+    <!-- LOGIN -->
+    <string name="login_title">Welcome back!</string>
+    <string name="login_subtitle">Masuk ke akun WorkWave untuk lanjut cari cuan</string>
+    <string name="hint_username">Username</string>
+    <string name="hint_password">Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="btn_login">LOG IN</string>
 
-<!-- WELCOME -->
-<string name="welcome_title">Selamat Datang!</string>
-<string name="welcome_heading">Karier Impian di Tanganmu</string>
-<string name="welcome_desc">
+    <!-- WELCOME -->
+    <string name="welcome_title">Selamat Datang!</string>
+    <string name="welcome_heading">Karier Impian di Tanganmu</string>
+    <string name="welcome_desc">
         Bangun portofolio luar biasa dan temukan proyek freelance terbaik dari seluruh dunia hanya dalam satu genggaman.
     </string>
 
-<!-- CONTENT DESC (aksesibilitas) -->
-<string name="desc_header_image">Header Image</string>
-<string name="desc_logo">Logo</string>
+    <!-- CONTENT DESC (aksesibilitas) -->
+    <string name="desc_header_image">Header Image</string>
+    <string name="desc_logo">Logo</string>
+
+    <!-- ===== JOB BOARD ACTIVITY ===== -->
+    <string name="desc_job_board">Ilustrasi Job Board</string>
+    <string name="desc_company_logo">Logo Perusahaan</string>
+
+    <!-- ===== PORTOFOLIO ACTIVITY ===== -->
+    <string name="desc_portofolio">Ilustrasi Portofolio</string>
+    <string name="desc_project_image">Gambar Proyek</string>
 
 </resources>

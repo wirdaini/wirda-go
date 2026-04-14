@@ -72,6 +72,47 @@
                 android:layout_marginTop="12dp"
                 android:layout_marginBottom="40dp" />
 
+            <!-- ===== 4 TOMBOL ===== -->
+            <!-- Tombol 1: Rumus Bangun Ruang -->
+            <Button
+                android:id="@+id/btnRumusBangunRuang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rumus Bangun Ruang"
+                android:backgroundTint="@color/button_primary"
+                android:textColor="@android:color/white"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Tombol 2: Job Board -->
+            <Button
+                android:id="@+id/btnJobBoard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Job Board"
+                android:backgroundTint="@color/button_secondary"
+                android:textColor="@android:color/white"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Tombol 3: Portofolio -->
+            <Button
+                android:id="@+id/btnPortofolio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Portofolio"
+                android:backgroundTint="@color/button_accent"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Tombol 4: Logout -->
+            <Button
+                android:id="@+id/btnLogout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Logout"
+                android:backgroundTint="@color/button_danger"
+                android:textColor="@android:color/white"
+                android:layout_marginBottom="12dp" />
+
         </LinearLayout>
 
     </LinearLayout>
