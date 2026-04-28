@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="@color/primary"
-        android:title="Web Bina Desa"
+        android:title="Web Bina"
         android:titleTextColor="@color/white"/>
 
     <!-- WebView -->
