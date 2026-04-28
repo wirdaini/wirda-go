@@ -13,6 +13,9 @@ import com.example.wirda_go.databinding.ActivityWelcomeBinding
 import com.example.wirda_go.pertemuan_2.BangunKalkulatorActivity
 import com.example.wirda_go.pertemuan_4.JobBoardActivity
 import com.example.wirda_go.pertemuan_4.PortofolioActivity
+import com.example.wirda_go.pertemuan_6.WebViewActivity
+import com.example.wirda_go.pertemuan_6.SplashScreenActivity
+
 
 class WelcomeActivity : AppCompatActivity() {
 
@@ -65,12 +68,26 @@ class WelcomeActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        // ===== TOMBOL BARU: Web View / Desktop View Bina Desa =====
+        binding.btnWebView.setOnClickListener {
+            val intent = Intent(this, WebViewActivity::class.java)
+            // Optional: kirim data judul dan deskripsi (kalo mau ditampilkan di toolbar WebView)
+            intent.putExtra("EXTRA_JUDUL", "Website Bina Desa")
+            intent.putExtra("EXTRA_DESKRIPSI", "Lihat informasi lengkap tentang Bina Desa")
+            startActivity(intent)
+        }
+
         // Tombol 4: Logout dengan Konfirmasi
         binding.btnLogout.setOnClickListener {
             AlertDialog.Builder(this)
                 .setTitle("Konfirmasi Logout")
                 .setMessage("Apakah Anda yakin ingin logout?")
                 .setPositiveButton("Ya") { _, _ ->
+
+                    val sharedPref = getSharedPreferences("user_pref", MODE_PRIVATE)
+                    val editor = sharedPref.edit()
+                    editor.clear()
+                    editor.apply()
                     // Pindah ke LoginActivity
                     val intent = Intent(this, LoginActivity::class.java)
                     intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK

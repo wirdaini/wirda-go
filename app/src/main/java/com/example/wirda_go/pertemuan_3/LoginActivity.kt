@@ -32,6 +32,12 @@ class LoginActivity : AppCompatActivity() {
             val password = binding.etPassword.text.toString()
 
             if (username.isNotEmpty() && password.isNotEmpty()) {
+
+                val sharedPref = getSharedPreferences("user_pref", MODE_PRIVATE)
+                val editor = sharedPref.edit()
+                editor.putBoolean("isLogin", true)
+                editor.putString("username", username)
+                editor.apply()
                 // Pindah ke WelcomeActivity dengan mengirim username
                 val intent = Intent(this, WelcomeActivity::class.java)
                 intent.putExtra("USER_NAME", username)  // <-- KIRIM USERNAME

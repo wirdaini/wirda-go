@@ -5,7 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BangunKalkulatorActivity">
+    android:background="@color/background_welcome"
+    tools:context=".pertemuan_2.BangunKalkulatorActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -21,7 +22,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Bangun Datar - Layang-layang"
-                android:textColor="@android:color/black"
+                android:textColor="@color/text_heading"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:padding="10dp"/>
@@ -51,7 +52,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Diagonal 1"
-                    android:textColor="@android:color/black"
+                    android:textColor="@color/text_default"
                     android:textSize="18sp"/>
 
                 <EditText
@@ -60,14 +61,17 @@
                     android:layout_height="wrap_content"
                     android:hint="Masukkan panjang diagonal 1"
                     android:inputType="numberDecimal"
-                    android:textSize="18sp"/>
+                    android:textSize="18sp"
+                    android:background="@color/input_background"
+                    android:padding="12dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Diagonal 2"
-                    android:textColor="@android:color/black"
-                    android:textSize="18sp"/>
+                    android:textColor="@color/text_default"
+                    android:textSize="18sp"
+                    android:layout_marginTop="12dp"/>
 
                 <EditText
                     android:id="@+id/etDiagonal2"
@@ -75,14 +79,17 @@
                     android:layout_height="wrap_content"
                     android:hint="Masukkan panjang diagonal 2"
                     android:inputType="numberDecimal"
-                    android:textSize="18sp"/>
+                    android:textSize="18sp"
+                    android:background="@color/input_background"
+                    android:padding="12dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Sisi Pendek"
-                    android:textColor="@android:color/black"
-                    android:textSize="18sp"/>
+                    android:textColor="@color/text_default"
+                    android:textSize="18sp"
+                    android:layout_marginTop="12dp"/>
 
                 <EditText
                     android:id="@+id/etSisiPendek"
@@ -90,14 +97,17 @@
                     android:layout_height="wrap_content"
                     android:hint="Masukkan sisi pendek"
                     android:inputType="numberDecimal"
-                    android:textSize="18sp"/>
+                    android:textSize="18sp"
+                    android:background="@color/input_background"
+                    android:padding="12dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Sisi Panjang"
-                    android:textColor="@android:color/black"
-                    android:textSize="18sp"/>
+                    android:textColor="@color/text_default"
+                    android:textSize="18sp"
+                    android:layout_marginTop="12dp"/>
 
                 <EditText
                     android:id="@+id/etSisiPanjang"
@@ -105,7 +115,9 @@
                     android:layout_height="wrap_content"
                     android:hint="Masukkan sisi panjang"
                     android:inputType="numberDecimal"
-                    android:textSize="18sp"/>
+                    android:textSize="18sp"
+                    android:background="@color/input_background"
+                    android:padding="12dp"/>
 
             </LinearLayout>
 
@@ -114,21 +126,28 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
 
                 <Button
                     android:id="@+id/btnKeliling"
-                    style="@style/Widget.AppCompat.Button.Colored"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Hitung Keliling"/>
+                    android:text="Hitung Keliling"
+                    android:backgroundTint="@color/button_primary"
+                    android:textColor="@color/button_text"
+                    android:layout_margin="8dp"
+                    android:padding="12dp"/>
 
                 <Button
                     android:id="@+id/btnLuas"
-                    style="@style/Widget.AppCompat.Button.Colored"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Hitung Luas"/>
+                    android:text="Hitung Luas"
+                    android:backgroundTint="@color/button_secondary"
+                    android:textColor="@color/button_text"
+                    android:layout_margin="8dp"
+                    android:padding="12dp"/>
 
             </LinearLayout>
 
@@ -145,22 +164,23 @@
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:text="Keliling"
-                    android:textColor="@android:color/black"
+                    android:textColor="@color/text_default"
                     android:textSize="18sp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text=" : "
-                    android:textColor="@android:color/black"
+                    android:textColor="@color/text_default"
                     android:textSize="18sp"/>
 
                 <TextView
                     android:id="@+id/tvKeliling"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@android:color/black"
-                    android:textSize="18sp"/>
+                    android:textColor="@color/text_primary"
+                    android:textSize="18sp"
+                    android:textStyle="bold"/>
 
             </LinearLayout>
 
@@ -177,22 +197,23 @@
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:text="Luas"
-                    android:textColor="@android:color/black"
+                    android:textColor="@color/text_default"
                     android:textSize="18sp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text=" : "
-                    android:textColor="@android:color/black"
+                    android:textColor="@color/text_default"
                     android:textSize="18sp"/>
 
                 <TextView
                     android:id="@+id/tvLuas"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@android:color/black"
-                    android:textSize="18sp"/>
+                    android:textColor="@color/text_primary"
+                    android:textSize="18sp"
+                    android:textStyle="bold"/>
 
             </LinearLayout>
 
@@ -201,7 +222,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Bangun Ruang - Bola"
-                android:textColor="@android:color/black"
+                android:textColor="@color/text_heading"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:padding="10dp"
@@ -232,7 +253,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Jari-jari"
-                    android:textColor="@android:color/black"
+                    android:textColor="@color/text_default"
                     android:textSize="18sp"/>
 
                 <EditText
@@ -241,7 +262,9 @@
                     android:layout_height="wrap_content"
                     android:hint="Masukkan Jari-jari"
                     android:inputType="numberDecimal"
-                    android:textSize="18sp"/>
+                    android:textSize="18sp"
+                    android:background="@color/input_background"
+                    android:padding="12dp"/>
 
             </LinearLayout>
 
@@ -250,21 +273,28 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
 
                 <Button
                     android:id="@+id/btnLuasBola"
-                    style="@style/Widget.AppCompat.Button.Colored"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Hitung Luas"/>
+                    android:text="Hitung Luas"
+                    android:backgroundTint="@color/button_accent"
+                    android:textColor="@color/button_text"
+                    android:layout_margin="8dp"
+                    android:padding="12dp"/>
 
                 <Button
                     android:id="@+id/btnVolume"
-                    style="@style/Widget.AppCompat.Button.Colored"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Hitung Volume"/>
+                    android:text="Hitung Volume"
+                    android:backgroundTint="@color/button_webview"
+                    android:textColor="@color/button_text"
+                    android:layout_margin="8dp"
+                    android:padding="12dp"/>
 
             </LinearLayout>
 
@@ -281,22 +311,23 @@
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:text="Volume"
-                    android:textColor="@android:color/black"
+                    android:textColor="@color/text_default"
                     android:textSize="18sp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text=" : "
-                    android:textColor="@android:color/black"
+                    android:textColor="@color/text_default"
                     android:textSize="18sp"/>
 
                 <TextView
                     android:id="@+id/tvVolume"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@android:color/black"
-                    android:textSize="18sp"/>
+                    android:textColor="@color/text_primary"
+                    android:textSize="18sp"
+                    android:textStyle="bold"/>
 
             </LinearLayout>
 
@@ -307,28 +338,30 @@
                 android:orientation="horizontal"
                 android:paddingLeft="20dp"
                 android:paddingTop="20dp"
-                android:paddingRight="20dp">
+                android:paddingRight="20dp"
+                android:layout_marginBottom="20dp">
 
                 <TextView
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:text="Luas Bola"
-                    android:textColor="@android:color/black"
+                    android:textColor="@color/text_default"
                     android:textSize="18sp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text=" : "
-                    android:textColor="@android:color/black"
+                    android:textColor="@color/text_default"
                     android:textSize="18sp"/>
 
                 <TextView
                     android:id="@+id/tvLuasBola"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@android:color/black"
-                    android:textSize="18sp"/>
+                    android:textColor="@color/text_primary"
+                    android:textSize="18sp"
+                    android:textStyle="bold"/>
 
             </LinearLayout>
 
@@ -337,5 +370,3 @@
     </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-
-

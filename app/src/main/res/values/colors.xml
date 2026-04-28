@@ -2,8 +2,8 @@
 <resources>
 
     <!-- LOGIN -->
-    <color name="background_login">#F5F7FA</color>
-    <color name="text_primary">#111111</color>
+    <color name="background_login">#FFFFFF</color>
+    <color name="text_primary">#3C4049</color>
     <color name="text_secondary">#7A7A7A</color>
 
     <!-- INPUT -->
@@ -11,21 +11,43 @@
     <color name="input_icon">#9E9E9E</color>
 
     <!-- BUTTON -->
-    <color name="button_login_start">#8EC5DA</color>
-    <color name="button_login_end">#6EA7BE</color>
+    <color name="button_login_start">#175CDD</color>
+    <color name="button_login_end">#175CDD</color>
     <color name="button_text">#FFFFFF</color>
 
     <!-- WELCOME -->
-    <color name="background_welcome">#F5F7FA</color>
+    <color name="background_welcome">#F4F8FF</color>
     <color name="background_card">#FFFFFF</color>
-    <color name="divider">#8EC5DA</color>
-    <color name="text_title">#111111</color>
+    <color name="divider">#175CDD</color>
+    <color name="text_title">#112344</color>
     <color name="text_subtitle">#777777</color>
 
-    <!-- ===== TOMBOL UNTUK WELCOME ACTIVITY (4 TOMBOL) ===== -->
-    <color name="button_primary">#FF6B6B</color>      <!-- Merah muda untuk Rumus Bangun Ruang -->
-    <color name="button_secondary">#4ECDC4</color>    <!-- Teal/hijau kebiruan untuk Job Board -->
-    <color name="button_accent">#FFE66D</color>       <!-- Kuning untuk Portofolio -->
-    <color name="button_danger">#FF4757</color>       <!-- Merah untuk Logout -->
+    <!-- ===== TOMBOL UNTUK WELCOME ACTIVITY ===== -->
+    <color name="button_primary">#175CDD</color>
+    <color name="button_secondary">#175CDD</color>
+    <color name="button_accent">#175CDD</color>
+
+    <!-- TOMBOL WEBVIEW -->
+    <color name="button_webview">#175CDD</color>
+
+    <color name="button_danger">#DF1529</color>
+
+    <color name="background">#FFFFFF</color>
+    <color name="text_default">#3C4049</color>
+    <color name="text_heading">#112344</color>
+    <color name="primary">#175CDD</color>
+
+    <color name="white">#FFFFFF</color>
+
+    <!-- ===== WARNA TAMBAHAN ===== -->
+    <color name="bina_desa_green_dark">#175CDD</color>
+    <color name="bina_desa_green_light">#175CDD</color>
+    <color name="bina_desa_teal">#175CDD</color>
+
+    <!-- Status Colors -->
+    <color name="progress_bar">#175CDD</color>
+    <color name="status_success">#059652</color>
+    <color name="status_error">#DF1529</color>
+    <color name="status_warning">#FFA726</color>
 
 </resources>

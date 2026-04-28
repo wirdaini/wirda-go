@@ -100,8 +100,22 @@
                 android:layout_height="wrap_content"
                 android:text="Portofolio"
                 android:backgroundTint="@color/button_accent"
-                android:textColor="@android:color/black"
+                android:textColor="@android:color/white"
                 android:layout_marginBottom="12dp" />
+
+            <!-- TOMBOL BARU: Web View / Desktop View Bina Desa -->
+            <Button
+                android:id="@+id/btnWebView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Web View Bina Desa"
+                android:backgroundTint="@color/button_webview"
+                android:textColor="@android:color/white"
+                android:layout_marginBottom="12dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:textSize="14sp"
+                android:drawableStart="@android:drawable/ic_menu_view"
+                android:drawablePadding="8dp" />
 
             <!-- Tombol 4: Logout -->
             <Button
