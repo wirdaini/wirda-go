@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" >
+    xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -13,36 +13,43 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Wirdago"
-        tools:targetApi="31" >
-
-        <!-- 🔥 SPLASH (JADI HALAMAN PERTAMA) -->
+        tools:targetApi="31">
         <activity
-            android:name=".pertemuan_6.SplashScreenActivity"
-            android:exported="true" >
+            android:name=".AuthActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Home.pertemuan_7.SeventhActivity"
+            android:exported="false" /> <!-- 🔥 SPLASH (JADI HALAMAN PERTAMA) -->
+        <activity
+            android:name=".BaseActivity"
+            android:exported="false" /> <!-- LOGIN -->
+        <activity
+            android:name=".Home.pertemuan_3.LoginActivity"
+            android:exported="false" /> <!-- WELCOME -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" /> <!-- WEBVIEW -->
+        <activity
+            android:name=".Home.pertemuan_6.WebViewActivity"
+            android:exported="false" /> <!-- LAINNYA -->
+        <activity
+            android:name=".Home.pertemuan_2.BangunKalkulatorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Home.pertemuan_4.JobBoardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Home.pertemuan_4.PortofolioActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SplashScreenActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity> <!-- LOGIN -->
-        <activity
-            android:name=".pertemuan_3.LoginActivity"
-            android:exported="false" /> <!-- WELCOME -->
-        <activity
-            android:name=".pertemuan_3.WelcomeActivity"
-            android:exported="false" /> <!-- WEBVIEW -->
-        <activity
-            android:name=".pertemuan_6.WebViewActivity"
-            android:exported="false" /> <!-- LAINNYA -->
-        <activity
-            android:name=".pertemuan_2.BangunKalkulatorActivity"
-            android:exported="false" />
-        <activity
-            android:name=".pertemuan_4.JobBoardActivity"
-            android:exported="false" />
-        <activity
-            android:name=".pertemuan_4.PortofolioActivity"
-            android:exported="false" />
+        </activity>
     </application>
 
 </manifest>

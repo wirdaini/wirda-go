@@ -1,52 +1,51 @@
-package com.example.wirda_go
+package com.example.wirda_go.Home
 
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.example.wirda_go.databinding.ActivityMainBinding
+import androidx.appcompat.app.AppCompatActivity.MODE_PRIVATE
+import com.example.wirda_go.AuthActivity
 import com.example.wirda_go.Home.pertemuan_2.BangunKalkulatorActivity
-import com.example.wirda_go.Home.pertemuan_3.LoginActivity
 import com.example.wirda_go.Home.pertemuan_4.JobBoardActivity
 import com.example.wirda_go.Home.pertemuan_4.PortofolioActivity
 import com.example.wirda_go.Home.pertemuan_6.WebViewActivity
 import com.example.wirda_go.Home.pertemuan_7.SeventhActivity
+import com.example.wirda_go.databinding.FragmentHomeBinding
 
-class MainActivity : AppCompatActivity() {
+class HomeFragment : Fragment() {
+    private var _binding: FragmentHomeBinding? = null
+    private val binding get() = _binding!!
 
-    private lateinit var binding: ActivityMainBinding
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        // Inflate the layout for this fragment
+        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        return binding.root
+    }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-        enableEdgeToEdge()
-        ViewCompat.setOnApplyWindowInsetsListener(binding.main) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+        (requireActivity() as AppCompatActivity).setSupportActionBar(binding.toolbar)
+        (requireActivity() as AppCompatActivity).supportActionBar?.apply {
+            title = "Home"
         }
 
-        // Kita ambil data "USER_NAME" yang dikirim tadi
-        val namaDariLogin = intent.getStringExtra("USER_NAME")
-
-        // Tampilkan ke TextView
-        if (!namaDariLogin.isNullOrEmpty()) {
-            binding.tvWelcome.text = "Selamat Datang, $namaDariLogin!"
-        } else {
-            binding.tvWelcome.text = "Selamat Datang, User!"
-        }
+        val sharedPref = requireContext().getSharedPreferences("user_pref", MODE_PRIVATE)
 
         // ===== 4 TOMBOL ====
         // Tombol 1: Rumus Bangun Ruang
         binding.btnRumusBangunRuang.setOnClickListener {
-            val intent = Intent(this, BangunKalkulatorActivity::class.java)
+            val intent = Intent(requireContext(), BangunKalkulatorActivity::class.java)
             intent.putExtra("EXTRA_JUDUL", "Rumus Bangun Ruang")
             intent.putExtra("EXTRA_DESKRIPSI", "Hitung volume dan luas permukaan bangun ruang dengan mudah")
             startActivity(intent)
@@ -54,7 +53,7 @@ class MainActivity : AppCompatActivity() {
 
         // Tombol 2: Job Board
         binding.btnJobBoard.setOnClickListener {
-            val intent = Intent(this, JobBoardActivity::class.java)
+            val intent = Intent(requireContext(), JobBoardActivity::class.java)
             intent.putExtra("EXTRA_JUDUL", "Job Board")
             intent.putExtra("EXTRA_DESKRIPSI", "Temukan proyek freelance terbaik dari seluruh dunia")
             startActivity(intent)
@@ -62,7 +61,7 @@ class MainActivity : AppCompatActivity() {
 
         // Tombol 3: Portofolio
         binding.btnPortofolio.setOnClickListener {
-            val intent = Intent(this, PortofolioActivity::class.java)
+            val intent = Intent(requireContext(), PortofolioActivity::class.java)
             intent.putExtra("EXTRA_JUDUL", "Portofolio Saya")
             intent.putExtra("EXTRA_DESKRIPSI", "Bangun portofolio luar biasa untuk menarik klien")
             startActivity(intent)
@@ -70,44 +69,45 @@ class MainActivity : AppCompatActivity() {
 
         // ===== TOMBOL BARU: Web View / Desktop View Bina Desa =====
         binding.btnWebView.setOnClickListener {
-            val intent = Intent(this, WebViewActivity::class.java)
+            val intent = Intent(requireContext(), WebViewActivity::class.java)
             // Optional: kirim data judul dan deskripsi (kalo mau ditampilkan di toolbar WebView)
             intent.putExtra("EXTRA_JUDUL", "Website Bina Desa")
             intent.putExtra("EXTRA_DESKRIPSI", "Lihat informasi lengkap tentang Bina Desa")
             startActivity(intent)
         }
 
-//        // Tombol Pertemuan 7
-//        binding.btnSeventh.setOnClickListener {
-//            val intent = Intent(this, SeventhActivity::class.java)
-//            intent.putExtra("EXTRA_JUDUL", "Pertemuan 7")
-//            intent.putExtra("EXTRA_DESKRIPSI", "Semanagat sampai tamat!!!")
-//            startActivity(intent)
-//        }
+        // Tombol Pertemuan 7
+        binding.btnSeventh.setOnClickListener {
+            val intent = Intent(requireContext(), SeventhActivity::class.java)
+            intent.putExtra("EXTRA_JUDUL", "Pertemuan 7")
+            intent.putExtra("EXTRA_DESKRIPSI", "Semanagat sampai tamat!!!")
+            startActivity(intent)
+        }
 
         // Tombol 4: Logout dengan Konfirmasi
         binding.btnLogout.setOnClickListener {
-            AlertDialog.Builder(this)
+            AlertDialog.Builder(requireContext())
                 .setTitle("Konfirmasi Logout")
                 .setMessage("Apakah Anda yakin ingin logout?")
                 .setPositiveButton("Ya") { _, _ ->
 
-                    val sharedPref = getSharedPreferences("user_pref", MODE_PRIVATE)
                     val editor = sharedPref.edit()
                     editor.clear()
                     editor.apply()
-                    // Pindah ke LoginActivity
-                    val intent = Intent(this, LoginActivity::class.java)
+                    // Pindah ke AuthActivity
+                    val intent = Intent(requireContext(), AuthActivity::class.java)
                     intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                     Log.e("Info Dialog","Anda memilih Ya!")
                     startActivity(intent)
-                    finish()
+                    requireActivity().finish()
                 }
                 .setNegativeButton("Tidak") { _, _ ->
-                    Toast.makeText(this, "Logout dibatalkan", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(requireContext(), "Logout dibatalkan", Toast.LENGTH_SHORT).show()
                     Log.e("Info Dialog","Anda memilih Tidak!")
                 }
                 .show()
         }
+
     }
+
 }

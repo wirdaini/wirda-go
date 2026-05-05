@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/background_welcome">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="24dp">
+
+        <!-- Toolbar -->
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:titleTextColor="@android:color/white"
+                app:title="Home" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <!-- Header Image - ukuran 200dp -->
+        <ImageView
+            android:id="@+id/ivHeader"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/home"
+            android:contentDescription="@string/desc_header_image"
+            app:layout_constraintTop_toBottomOf="@id/appBar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Divider -->
+        <View
+            android:id="@+id/divider"
+            android:layout_width="60dp"
+            android:layout_height="3dp"
+            android:layout_marginTop="24dp"
+            android:background="@color/divider"
+            app:layout_constraintTop_toBottomOf="@id/ivHeader"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Judul Welcome -->
+        <TextView
+            android:id="@+id/tvWelcome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/poppins_bold"
+            android:gravity="center"
+            android:paddingHorizontal="24dp"
+            android:text="@string/welcome_title"
+            android:textColor="@color/text_title"
+            android:textSize="24sp"
+            app:layout_constraintTop_toBottomOf="@id/divider"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Deskripsi Heading -->
+        <TextView
+            android:id="@+id/tvLoremIpsumTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/poppins_bold"
+            android:gravity="center"
+            android:letterSpacing="0.05"
+            android:paddingHorizontal="24dp"
+            android:text="@string/welcome_heading"
+            android:textColor="@color/text_title"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@id/tvWelcome"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Deskripsi Subtitle -->
+        <TextView
+            android:id="@+id/tvLoremIpsumSubtitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/inter_18pt_regular"
+            android:gravity="center"
+            android:text="@string/welcome_desc"
+            android:textColor="@color/text_subtitle"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/tvLoremIpsumTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Tombol Rumus Bangun Ruang -->
+        <Button
+            android:id="@+id/btnRumusBangunRuang"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="@color/button_webview"
+            android:drawablePadding="8dp"
+            android:drawableStart="@android:drawable/ic_menu_view"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Rumus Bangun Ruang"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            app:cornerRadius="12dp"
+            app:layout_constraintTop_toBottomOf="@id/tvLoremIpsumSubtitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Tombol Job Board -->
+        <Button
+            android:id="@+id/btnJobBoard"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="@color/button_webview"
+            android:drawablePadding="8dp"
+            android:drawableStart="@android:drawable/ic_menu_view"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Job Board"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            app:cornerRadius="12dp"
+            app:layout_constraintTop_toBottomOf="@id/btnRumusBangunRuang"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Tombol Portofolio -->
+        <Button
+            android:id="@+id/btnPortofolio"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="@color/button_webview"
+            android:drawablePadding="8dp"
+            android:drawableStart="@android:drawable/ic_menu_view"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Portofolio"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            app:cornerRadius="12dp"
+            app:layout_constraintTop_toBottomOf="@id/btnJobBoard"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Tombol Web View Bina Desa -->
+        <Button
+            android:id="@+id/btnWebView"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="@color/button_webview"
+            android:drawablePadding="8dp"
+            android:drawableStart="@android:drawable/ic_menu_view"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Web View Bina Desa"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            app:cornerRadius="12dp"
+            app:layout_constraintTop_toBottomOf="@id/btnPortofolio"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Tombol Pertemuan 7 -->
+        <Button
+            android:id="@+id/btnSeventh"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="@color/button_webview"
+            android:drawablePadding="8dp"
+            android:drawableStart="@android:drawable/ic_menu_view"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Pertemuan 7"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            app:cornerRadius="12dp"
+            app:layout_constraintTop_toBottomOf="@id/btnWebView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Tombol Logout -->
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="24dp"
+            android:backgroundTint="@color/button_danger"
+            android:text="Logout"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            app:cornerRadius="12dp"
+            app:layout_constraintTop_toBottomOf="@id/btnSeventh"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

@@ -1,4 +1,4 @@
-package com.example.wirda_go.pertemuan_3
+package com.example.wirda_go.Home.pertemuan_3
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,7 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.wirda_go.R
+import com.example.wirda_go.BaseActivity
 import com.example.wirda_go.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
@@ -39,7 +39,7 @@ class LoginActivity : AppCompatActivity() {
                 editor.putString("username", username)
                 editor.apply()
                 // Pindah ke WelcomeActivity dengan mengirim username
-                val intent = Intent(this, WelcomeActivity::class.java)
+                val intent = Intent(this, BaseActivity::class.java)
                 intent.putExtra("USER_NAME", username)  // <-- KIRIM USERNAME
                 startActivity(intent)
                 finish()

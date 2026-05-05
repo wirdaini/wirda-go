@@ -29,5 +29,59 @@
     <!-- ===== PORTOFOLIO ACTIVITY ===== -->
     <string name="desc_portofolio">Ilustrasi Portofolio</string>
     <string name="desc_project_image">Gambar Proyek</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <!-- PROFILE -->
+    <string name="profile_name">Wirda Developer</string>
+    <string name="profile_role">Mobile Developer</string>
+
+    <string name="about_title">About Me</string>
+    <string name="about_desc">
+        Mahasiswa Sistem Informasi yang fokus pada pengembangan aplikasi mobile modern dan UI/UX design.
+        Berpengalaman membuat aplikasi dengan tampilan clean dan user-friendly.
+    </string>
+
+    <!--    <string name="email">📧 wirda@email.com</string>-->
+    <!--    <string name="campus">🏫 Politeknik Caltex Riau</string>-->
+    <!--    <string name="skills">💻 Kotlin | UI/UX | Web</string>-->
+
+    <string name="skills_title">Skills</string>
+
+    <string name="skill_kotlin">Kotlin</string>
+    <string name="skill_ui">UI Design</string>
+    <string name="skill_android">Android</string>
+
+    <string name="contact_btn">Contact Me</string>
+    <string name="quote_text">"Building a future is like developing a system — it takes planning, consistency, and continuous improvement to transform ideas into something useful and impactful."</string>
+
+    <!-- HALAMAN ABOUT... -->
+
+    <!-- About Bina Desa Fragment Strings -->
+    <string name="about_suara_rakyat_title">SUARA RAKYAT</string>
+    <string name="about_suara_rakyat_subtitle">Pengaduan &amp; Aspirasi Warga</string>
+
+    <!-- Card Titles -->
+    <string name="about_tentang_aplikasi">📋 Tentang Aplikasi</string>
+    <string name="about_layanan_tersedia">✅ Layanan Tersedia</string>
+    <string name="about_kategori_pengaduan">📂 Kategori Pengaduan</string>
+    <string name="about_fitur_utama">⚙️ Fitur Utama</string>
+    <string name="about_identitas_pengembang">👩‍💻 Identitas Pengembang</string>
+
+    <!-- Deskripsi Aplikasi -->
+    <string name="about_deskripsi_aplikasi">Suara Rakyat adalah aplikasi pengaduan dan aspirasi warga berbasis mobile yang digunakan untuk menampung dan mengelola laporan warga desa. Melalui Suara Rakyat, warga desa dapat melakukan pengaduan dan menyampaikan aspirasi kepada Pemerintah Desa (Pemdes).</string>
+
+    <!-- Layanan Tersedia -->
+    <string name="about_layanan_list">• Pengaduan Online\n• Laporan Perkembangan\n• Transparansi Pengaduan\n• Monitoring Tindak Lanjut\n• Penilaian Layanan</string>
+
+    <!-- Kategori Pengaduan -->
+    <string name="about_kategori_list">• Infrastruktur Desa\n• Lingkungan &amp; Kebersihan\n• Air Bersih &amp; Sanitasi\n• Kesehatan Masyarakat\n• Pendidikan\n• Pelayanan Publik</string>
+
+    <!-- Fitur Utama -->
+    <string name="about_fitur_list">1. Pengaduan Online\n2. Tindak Lanjut Pengaduan\n3. Penilaian Layanan\n4. Manajemen User &amp; Warga</string>
+
+    <!-- Identitas Pengembang -->
+    <string name="about_identitas_list">Nama: Wirda Aini Maghfiroh\nNIM: 2457301153\nProgram Studi: Sistem Informasi\nKampus: Politeknik Caltex Riau</string>
 
 </resources>

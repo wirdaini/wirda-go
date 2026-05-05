@@ -1,4 +1,4 @@
-package com.example.wirda_go.pertemuan_2
+package com.example.wirda_go.Home.pertemuan_2
 
 import android.widget.Button
 import android.widget.EditText

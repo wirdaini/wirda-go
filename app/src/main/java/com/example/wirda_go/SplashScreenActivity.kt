@@ -1,11 +1,11 @@
-package com.example.wirda_go.pertemuan_6
+package com.example.wirda_go
 
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
-import com.example.wirda_go.R
+import com.example.wirda_go.Home.pertemuan_3.LoginActivity
 
 class SplashScreenActivity : AppCompatActivity() {
 
@@ -19,9 +19,9 @@ class SplashScreenActivity : AppCompatActivity() {
         Handler(Looper.getMainLooper()).postDelayed({
 
             if (isLogin) {
-                startActivity(Intent(this, com.example.wirda_go.pertemuan_3.WelcomeActivity::class.java))
+                startActivity(Intent(this, com.example.wirda_go.BaseActivity::class.java))
             } else {
-                startActivity(Intent(this, com.example.wirda_go.pertemuan_3.LoginActivity::class.java))
+                startActivity(Intent(this, LoginActivity::class.java))
             }
 
             finish()
