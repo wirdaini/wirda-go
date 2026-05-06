@@ -60,4 +60,7 @@
     <color name="shadow_light">#20000000</color>
     <color name="shadow_dark">#40000000</color>
     <color name="gold">#FFD700</color>
+
+    <color name="purple_500">#DF1529</color>   <!-- Merah -->
+
 </resources>

@@ -21,7 +21,7 @@ class SplashScreenActivity : AppCompatActivity() {
             if (isLogin) {
                 startActivity(Intent(this, com.example.wirda_go.BaseActivity::class.java))
             } else {
-                startActivity(Intent(this, LoginActivity::class.java))
+                startActivity(Intent(this, AuthActivity::class.java))
             }
 
             finish()
