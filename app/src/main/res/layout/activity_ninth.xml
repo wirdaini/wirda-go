@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_welcome"
+    tools:context=".Home.pertemuan_9.NinthActivity">
+
+    <!-- TOOLBAR SEDERHANA (bukan custom) -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/primary"
+        app:title="Formulir Pengaduan"
+        app:titleTextColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:paddingBottom="32dp">
+
+            <!-- CARD INFORMASI PENGADUAN -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/background_card">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="20dp">
+
+                        <View
+                            android:layout_width="4dp"
+                            android:layout_height="20dp"
+                            android:background="@color/primary"
+                            android:layout_marginEnd="8dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Informasi Pengaduan"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/text_title" />
+                    </LinearLayout>
+
+                    <!-- Judul -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilJudul"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:hint="Judul Pengaduan"
+                        app:boxStrokeColor="@color/primary"
+                        app:hintTextColor="@color/primary">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etJudul"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textCapSentences"
+                            android:maxLines="1"
+                            android:textColor="@color/text_default" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Deskripsi -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilDeskripsi"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:hint="Deskripsi Pengaduan"
+                        app:boxStrokeColor="@color/primary"
+                        app:hintTextColor="@color/primary">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etDeskripsi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textMultiLine"
+                            android:minLines="4"
+                            android:maxLines="6"
+                            android:gravity="top"
+                            android:textColor="@color/text_default" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Lokasi -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilLokasi"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:hint="Lokasi Kejadian"
+                        app:prefixText="Jl. "
+                        app:boxStrokeColor="@color/primary"
+                        app:hintTextColor="@color/primary">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etLokasi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPostalAddress"
+                            android:maxLines="1"
+                            android:textColor="@color/text_default" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Button Kirim -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnKirimPengaduan"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:text="Kirim Pengaduan"
+                        android:textColor="@color/button_text"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:backgroundTint="@color/primary"
+                        app:cornerRadius="12dp" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- CARD FILTER KATEGORI -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/background_card">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="16dp">
+
+                        <View
+                            android:layout_width="4dp"
+                            android:layout_height="20dp"
+                            android:background="@color/primary"
+                            android:layout_marginEnd="8dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Filter Kategori"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/text_title" />
+                    </LinearLayout>
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/chipGroupKategori"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:chipSpacing="10dp"
+                        app:singleSelection="true">
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chipSemua"
+                            style="@style/Widget.MaterialComponents.Chip.Filter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="Semua"
+                            app:chipBackgroundColor="@color/primary"
+                            android:textColor="@color/white" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chipInfrastruktur"
+                            style="@style/Widget.MaterialComponents.Chip.Filter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Infrastruktur"
+                            app:chipStrokeColor="@color/primary"
+                            app:chipStrokeWidth="1dp"
+                            android:textColor="@color/text_secondary" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chipLingkungan"
+                            style="@style/Widget.MaterialComponents.Chip.Filter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Lingkungan"
+                            app:chipStrokeColor="@color/primary"
+                            app:chipStrokeWidth="1dp"
+                            android:textColor="@color/text_secondary" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chipAirBersih"
+                            style="@style/Widget.MaterialComponents.Chip.Filter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Air Bersih"
+                            app:chipStrokeColor="@color/primary"
+                            app:chipStrokeWidth="1dp"
+                            android:textColor="@color/text_secondary" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chipPendidikan"
+                            style="@style/Widget.MaterialComponents.Chip.Filter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Pendidikan"
+                            app:chipStrokeColor="@color/primary"
+                            app:chipStrokeWidth="1dp"
+                            android:textColor="@color/text_secondary" />
+                    </com.google.android.material.chip.ChipGroup>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- CARD LAYANAN -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/background_card">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="16dp">
+
+                        <View
+                            android:layout_width="4dp"
+                            android:layout_height="20dp"
+                            android:background="@color/primary"
+                            android:layout_marginEnd="8dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Layanan Tersedia"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/text_title" />
+                    </LinearLayout>
+
+                    <androidx.gridlayout.widget.GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:columnCount="3"
+                        app:rowCount="2"
+                        android:layout_margin="-6dp">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnPengaduan"
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                            android:layout_width="0dp"
+                            android:layout_height="44dp"
+                            android:layout_margin="6dp"
+                            android:text="Pengaduan"
+                            android:textColor="@color/primary"
+                            android:textSize="10sp"
+                            app:cornerRadius="10dp"
+                            app:layout_columnWeight="1"
+                            app:layout_gravity="fill_horizontal"
+                            app:strokeColor="@color/primary"
+                            app:strokeWidth="1dp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnAspirasi"
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                            android:layout_width="0dp"
+                            android:layout_height="44dp"
+                            android:layout_margin="6dp"
+                            android:text="Aspirasi"
+                            android:textColor="@color/primary"
+                            android:textSize="10sp"
+                            app:cornerRadius="10dp"
+                            app:layout_columnWeight="1"
+                            app:layout_gravity="fill_horizontal"
+                            app:strokeColor="@color/primary"
+                            app:strokeWidth="1dp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnStatus"
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                            android:layout_width="0dp"
+                            android:layout_height="44dp"
+                            android:layout_margin="6dp"
+                            android:text="Status"
+                            android:textColor="@color/primary"
+                            android:textSize="10sp"
+                            app:cornerRadius="10dp"
+                            app:layout_columnWeight="1"
+                            app:layout_gravity="fill_horizontal"
+                            app:strokeColor="@color/primary"
+                            app:strokeWidth="1dp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnTindakLanjut"
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                            android:layout_width="0dp"
+                            android:layout_height="44dp"
+                            android:layout_margin="6dp"
+                            android:text="Tindak Lanjut"
+                            android:textColor="@color/primary"
+                            android:textSize="10sp"
+                            app:cornerRadius="10dp"
+                            app:layout_columnWeight="1"
+                            app:layout_gravity="fill_horizontal"
+                            app:strokeColor="@color/primary"
+                            app:strokeWidth="1dp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnPenilaian"
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                            android:layout_width="0dp"
+                            android:layout_height="44dp"
+                            android:layout_margin="6dp"
+                            android:text="Penilaian"
+                            android:textColor="@color/primary"
+                            android:textSize="10sp"
+                            app:cornerRadius="10dp"
+                            app:layout_columnWeight="1"
+                            app:layout_gravity="fill_horizontal"
+                            app:strokeColor="@color/primary"
+                            app:strokeWidth="1dp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnInformasi"
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                            android:layout_width="0dp"
+                            android:layout_height="44dp"
+                            android:layout_margin="6dp"
+                            android:text="Informasi"
+                            android:textColor="@color/primary"
+                            android:textSize="10sp"
+                            app:cornerRadius="10dp"
+                            app:layout_columnWeight="1"
+                            app:layout_gravity="fill_horizontal"
+                            app:strokeColor="@color/primary"
+                            app:strokeWidth="1dp" />
+                    </androidx.gridlayout.widget.GridLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

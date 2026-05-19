@@ -60,4 +60,17 @@
     <color name="shadow_light">#20000000</color>
     <color name="shadow_dark">#40000000</color>
     <color name="gold">#FFD700</color>
+
+    <color name="sr_primary">#1A3A5C</color>
+    <color name="sr_primary_light">#2196F3</color>
+    <color name="sr_accent">#4CAF50</color>
+    <color name="sr_background">#F5F7FA</color>
+    <color name="sr_text_primary">#212121</color>
+    <color name="sr_text_secondary">#757575</color>
+    <color name="sr_white">#FFFFFF</color>
+    <color name="sr_border">#BDBDBD</color>
+
+    <!-- Bottom Navigation Colors -->
+    <color name="bottom_nav_selected">#175CDD</color>
+    <color name="bottom_nav_unselected">#9E9E9E</color>
 </resources>

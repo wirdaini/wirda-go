@@ -17,6 +17,7 @@ import com.example.wirda_go.Home.pertemuan_4.JobBoardActivity
 import com.example.wirda_go.Home.pertemuan_4.PortofolioActivity
 import com.example.wirda_go.Home.pertemuan_6.WebViewActivity
 import com.example.wirda_go.Home.pertemuan_7.SeventhActivity
+import com.example.wirda_go.Home.pertemuan_9.NinthActivity
 import com.example.wirda_go.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
@@ -84,6 +85,12 @@ class HomeFragment : Fragment() {
             startActivity(intent)
         }
 
+        // Tombol Pertemuan 9
+        binding.btnNinth.setOnClickListener {
+            val intent = Intent(requireContext(), NinthActivity::class.java)
+            startActivity(intent)
+        }
+
         // Tombol 4: Logout dengan Konfirmasi
         binding.btnLogout.setOnClickListener {
             AlertDialog.Builder(requireContext())
@@ -107,7 +114,5 @@ class HomeFragment : Fragment() {
                 }
                 .show()
         }
-
     }
-
 }

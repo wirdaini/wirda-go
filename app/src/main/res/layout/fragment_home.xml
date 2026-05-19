@@ -13,6 +13,16 @@
         android:layout_height="wrap_content"
         android:paddingBottom="24dp">
 
+        <!-- Header dengan efek gelombang — letakkan di PALING ATAS -->
+        <View
+            android:id="@+id/view_header"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:background="@drawable/bg_header_wave"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <!-- Toolbar -->
         <com.google.android.material.appbar.AppBarLayout
             android:id="@+id/appBar"
@@ -27,7 +37,7 @@
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:background="?attr/colorPrimary"
+                android:background="@color/bina_desa_teal"
                 app:layout_scrollFlags="scroll|enterAlways"
                 app:titleTextColor="@android:color/white"
                 app:title="Home" />
@@ -35,16 +45,16 @@
         </com.google.android.material.appbar.AppBarLayout>
 
         <!-- Header Image - ukuran 200dp -->
-        <ImageView
-            android:id="@+id/ivHeader"
-            android:layout_width="0dp"
-            android:layout_height="200dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/home"
-            android:contentDescription="@string/desc_header_image"
-            app:layout_constraintTop_toBottomOf="@id/appBar"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+<!--        <ImageView-->
+<!--            android:id="@+id/ivHeader"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="200dp"-->
+<!--            android:scaleType="centerCrop"-->
+<!--            android:src="@drawable/home"-->
+<!--            android:contentDescription="@string/desc_header_image"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/appBar"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent" />-->
 
         <!-- Divider -->
         <View
@@ -53,7 +63,7 @@
             android:layout_height="3dp"
             android:layout_marginTop="24dp"
             android:background="@color/divider"
-            app:layout_constraintTop_toBottomOf="@id/ivHeader"
+            app:layout_constraintTop_toBottomOf="@id/appBar"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 
@@ -201,6 +211,25 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 
+        <!-- Tombol Pertemuan 9 -->
+        <Button
+            android:id="@+id/btnNinth"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="@color/button_webview"
+            android:drawablePadding="8dp"
+            android:drawableStart="@android:drawable/ic_menu_view"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Pertemuan 9"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            app:cornerRadius="12dp"
+            app:layout_constraintTop_toBottomOf="@id/btnSeventh"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
         <!-- Tombol Logout -->
         <Button
             android:id="@+id/btnLogout"
@@ -214,7 +243,7 @@
             android:textColor="@android:color/white"
             android:textSize="14sp"
             app:cornerRadius="12dp"
-            app:layout_constraintTop_toBottomOf="@id/btnSeventh"
+            app:layout_constraintTop_toBottomOf="@id/btnNinth"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />

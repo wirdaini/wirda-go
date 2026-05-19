@@ -40,7 +40,15 @@ android {
 }
 
 dependencies {
+// Material Design (kemungkinan sudah ada)
+    implementation("com.google.android.material:material:1.11.0")
 
+    // GridLayout
+    implementation("androidx.gridlayout:gridlayout:1.0.0")
+
+    // Glide (untuk load gambar dari URL di ListView Custom)
+    implementation("com.github.bumptech.glide:glide:4.16.0")
+    annotationProcessor("com.github.bumptech.glide:compiler:4.16.0")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
