@@ -73,4 +73,6 @@
     <!-- Bottom Navigation Colors -->
     <color name="bottom_nav_selected">#175CDD</color>
     <color name="bottom_nav_unselected">#9E9E9E</color>
+
+    <color name="purple_500">#6200EE</color>
 </resources>

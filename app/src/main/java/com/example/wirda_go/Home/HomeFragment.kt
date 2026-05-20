@@ -12,6 +12,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatActivity.MODE_PRIVATE
 import com.example.wirda_go.AuthActivity
+import com.example.wirda_go.Home.pertemuan_10.TenthActivity
 import com.example.wirda_go.Home.pertemuan_2.BangunKalkulatorActivity
 import com.example.wirda_go.Home.pertemuan_4.JobBoardActivity
 import com.example.wirda_go.Home.pertemuan_4.PortofolioActivity
@@ -90,6 +91,13 @@ class HomeFragment : Fragment() {
             val intent = Intent(requireContext(), NinthActivity::class.java)
             startActivity(intent)
         }
+
+        // Tombol Pertemuan 9
+        binding.btnTenth.setOnClickListener {
+            val intent = Intent(requireContext(), TenthActivity::class.java)
+            startActivity(intent)
+        }
+
 
         // Tombol 4: Logout dengan Konfirmasi
         binding.btnLogout.setOnClickListener {

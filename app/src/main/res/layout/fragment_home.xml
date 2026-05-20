@@ -230,6 +230,25 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 
+        <!-- Tombol Pertemuan 9 -->
+        <Button
+            android:id="@+id/btnTenth"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="@color/button_webview"
+            android:drawablePadding="8dp"
+            android:drawableStart="@android:drawable/ic_menu_view"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Pertemuan 10"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            app:cornerRadius="12dp"
+            app:layout_constraintTop_toBottomOf="@id/btnNinth"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
         <!-- Tombol Logout -->
         <Button
             android:id="@+id/btnLogout"
@@ -243,7 +262,7 @@
             android:textColor="@android:color/white"
             android:textSize="14sp"
             app:cornerRadius="12dp"
-            app:layout_constraintTop_toBottomOf="@id/btnNinth"
+            app:layout_constraintTop_toBottomOf="@id/btnTenth"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
