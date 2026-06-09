@@ -127,7 +127,7 @@
             android:drawablePadding="8dp"
             android:drawableStart="@android:drawable/ic_menu_view"
             android:fontFamily="@font/poppins_semibold"
-            android:text="Rumus Bangun Ruang"
+            android:text="Rumus Bangun ruang"
             android:textColor="@android:color/white"
             android:textSize="14sp"
             app:cornerRadius="12dp"
