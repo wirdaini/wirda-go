@@ -34,7 +34,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
-        android:text="Siap Bersuara?"
+        android:text="Siap untuk Bersuara?"
         android:textColor="@color/sr_primary"
         android:textSize="28sp"
         android:textStyle="bold"
