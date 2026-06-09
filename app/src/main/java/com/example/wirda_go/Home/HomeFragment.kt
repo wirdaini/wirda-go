@@ -11,7 +11,10 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatActivity.MODE_PRIVATE
+import androidx.lifecycle.lifecycleScope
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.wirda_go.AuthActivity
+import com.example.wirda_go.Data.Api.NewsApiClient
 import com.example.wirda_go.Home.pertemuan_2.BangunKalkulatorActivity
 import com.example.wirda_go.Home.pertemuan_4.JobBoardActivity
 import com.example.wirda_go.Home.pertemuan_4.PortofolioActivity
@@ -19,6 +22,7 @@ import com.example.wirda_go.Home.pertemuan_6.WebViewActivity
 import com.example.wirda_go.Home.pertemuan_7.SeventhActivity
 import com.example.wirda_go.Home.pertemuan_9.NinthActivity
 import com.example.wirda_go.databinding.FragmentHomeBinding
+import kotlinx.coroutines.launch
 
 class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
@@ -101,8 +105,9 @@ class HomeFragment : Fragment() {
                     val editor = sharedPref.edit()
                     editor.clear()
                     editor.apply()
-                    // Pindah ke AuthActivity
-                    val intent = Intent(requireContext(), AuthActivity::class.java)
+
+                    // Pindah ke OnboardingActivity
+                    val intent = Intent(requireContext(), com.example.wirda_go.onboarding.OnboardingActivity::class.java)
                     intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                     Log.e("Info Dialog","Anda memilih Ya!")
                     startActivity(intent)
@@ -113,6 +118,23 @@ class HomeFragment : Fragment() {
                     Log.e("Info Dialog","Anda memilih Tidak!")
                 }
                 .show()
+        }
+
+        loadNews()
+    }
+
+    private fun loadNews() {
+        lifecycleScope.launch {
+            try {
+                val response = NewsApiClient.apiService.getNews()
+                val adapter = NewsAdapter(response.articles)
+                binding.rvNews.adapter = adapter
+                binding.rvNews.layoutManager = LinearLayoutManager(requireContext())
+            } catch (e: Exception) {
+                Log.e("NewsError", "Error: ${e.message}")
+                Log.e("NewsError", "Cause: ${e.cause}")
+                Toast.makeText(requireContext(), "Error: ${e.message}", Toast.LENGTH_LONG).show()
+            }
         }
     }
 }

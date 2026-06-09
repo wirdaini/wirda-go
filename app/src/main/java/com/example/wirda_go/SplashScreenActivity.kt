@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
-import com.example.wirda_go.Home.pertemuan_3.LoginActivity
+import com.example.wirda_go.onboarding.OnboardingActivity
 
 class SplashScreenActivity : AppCompatActivity() {
 
@@ -13,15 +13,17 @@ class SplashScreenActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
-        val sharedPref = getSharedPreferences("user_pref", MODE_PRIVATE)
-        val isLogin = sharedPref.getBoolean("isLogin", false)
+        val userPref = getSharedPreferences("user_pref", MODE_PRIVATE)
+        val isLogin = userPref.getBoolean("isLogin", false)
 
         Handler(Looper.getMainLooper()).postDelayed({
 
             if (isLogin) {
-                startActivity(Intent(this, com.example.wirda_go.BaseActivity::class.java))
+                // Sudah login → langsung masuk app
+                startActivity(Intent(this, BaseActivity::class.java))
             } else {
-                startActivity(Intent(this, AuthActivity::class.java))
+                // Belum login → onboarding dulu SELALU
+                startActivity(Intent(this, OnboardingActivity::class.java))
             }
 
             finish()
