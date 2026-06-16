@@ -7,7 +7,9 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
 import com.example.wirda_go.About.AboutFragment
+import com.example.wirda_go.Draft.DraftFragment
 import com.example.wirda_go.Home.HomeFragment
+import com.example.wirda_go.Kategori.KategoriFragment
 import com.example.wirda_go.Profile.ProfileFragment
 import com.example.wirda_go.databinding.ActivityBaseBinding
 
@@ -43,6 +45,14 @@ class BaseActivity : AppCompatActivity() {
                 }
                 R.id.profile -> {
                     replaceFragment(ProfileFragment())
+                    true
+                }
+                R.id.menu_kategori -> {
+                    replaceFragment(KategoriFragment())
+                    true
+                }
+                R.id.menu_draft -> {
+                    replaceFragment(DraftFragment())
                     true
                 }
                 else ->false

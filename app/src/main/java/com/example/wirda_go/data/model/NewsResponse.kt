@@ -1,4 +1,4 @@
-package com.example.wirda_go.Data.Model
+package com.example.wirda_go.data.model
 
 data class NewsResponse(
     val status: String,

@@ -13,8 +13,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatActivity.MODE_PRIVATE
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.wirda_go.AuthActivity
-import com.example.wirda_go.Data.Api.NewsApiClient
+import com.example.wirda_go.data.api.NewsApiClient
 import com.example.wirda_go.Home.pertemuan_2.BangunKalkulatorActivity
 import com.example.wirda_go.Home.pertemuan_4.JobBoardActivity
 import com.example.wirda_go.Home.pertemuan_4.PortofolioActivity

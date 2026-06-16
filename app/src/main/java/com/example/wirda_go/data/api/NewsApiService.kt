@@ -1,4 +1,4 @@
-import com.example.wirda_go.Data.Model.NewsResponse
+import com.example.wirda_go.data.model.NewsResponse
 import retrofit2.http.GET
 import retrofit2.http.Query
 

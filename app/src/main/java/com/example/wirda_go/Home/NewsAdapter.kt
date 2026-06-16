@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.wirda_go.Data.Model.NewsItem
+import com.example.wirda_go.data.model.NewsItem
 import com.example.wirda_go.databinding.ItemNewsBinding
 
 class NewsAdapter(private val items: List<NewsItem>) :

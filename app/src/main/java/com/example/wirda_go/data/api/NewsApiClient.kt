@@ -1,4 +1,4 @@
-package com.example.wirda_go.Data.Api
+package com.example.wirda_go.data.api
 
 import NewsApiService
 import retrofit2.Retrofit
