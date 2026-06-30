@@ -44,6 +44,7 @@ class DraftFormActivity : AppCompatActivity() {
         db = AppDatabase.getInstance(this)
         loadSpinner()
 
+        // Cek izin notifikasi untuk Android 13+
         if (PermissionHelper.isNotificationPermissionRequired()) {
             val permission = Manifest.permission.POST_NOTIFICATIONS
             if (!PermissionHelper.hasPermission(this, permission)) {
@@ -84,7 +85,6 @@ class DraftFormActivity : AppCompatActivity() {
 
     private fun showNotificationAfterSubmit(judulPengaduan: String) {
         val intent = Intent(this, BaseActivity::class.java)
-
         NotificationHelper.showNotification(
             this,
             "Pengaduan Terkirim",
@@ -97,7 +97,6 @@ class DraftFormActivity : AppCompatActivity() {
         val calendar = Calendar.getInstance().apply {
             add(Calendar.MINUTE, 1)
         }
-
         ReminderHelper.setReminder(
             context = this,
             hour = calendar.get(Calendar.HOUR_OF_DAY),
@@ -106,7 +105,6 @@ class DraftFormActivity : AppCompatActivity() {
             message = "Pengaduan $judulPengaduan - silakan cek statusnya",
             targetActivity = BaseActivity::class.java
         )
-
         Toast.makeText(
             this,
             "Reminder 1 menit akan muncul untuk cek status pengaduan",
@@ -120,12 +118,15 @@ class DraftFormActivity : AppCompatActivity() {
             if (kategoriList.isNotEmpty()) {
                 val namaList = kategoriList.map { it.namaKategori }
                 val idList = kategoriList.map { it.id }
-                val adapter = ArrayAdapter(this@DraftFormActivity, android.R.layout.simple_spinner_item, namaList)
+                val adapter = ArrayAdapter(
+                    this@DraftFormActivity,
+                    android.R.layout.simple_spinner_item,
+                    namaList
+                )
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
                 binding.spinnerKategori.adapter = adapter
                 binding.spinnerKategori.onItemSelectedListener =
                     object : AdapterView.OnItemSelectedListener {
-
                         override fun onItemSelected(
                             parent: AdapterView<*>,
                             view: android.view.View?,
@@ -135,14 +136,16 @@ class DraftFormActivity : AppCompatActivity() {
                             kategoriId = idList[position]
                         }
 
-                        override fun onNothingSelected(
-                            parent: AdapterView<*>
-                        ) {
+                        override fun onNothingSelected(parent: AdapterView<*>) {
                             kategoriId = 0
                         }
                     }
             } else {
-                Toast.makeText(this@DraftFormActivity, "Belum ada kategori. Buat kategori dulu.", Toast.LENGTH_LONG).show()
+                Toast.makeText(
+                    this@DraftFormActivity,
+                    "Belum ada kategori. Buat kategori dulu.",
+                    Toast.LENGTH_LONG
+                ).show()
             }
         }
     }

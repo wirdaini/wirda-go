@@ -1,8 +1,18 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.Wirdago" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/sr_primary</item>
+        <item name="colorPrimaryVariant">@color/sr_primary</item>
+        <item name="colorOnPrimary">@color/sr_white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/sr_accent</item>
+        <item name="colorSecondaryVariant">@color/sr_accent</item>
+        <item name="colorOnSecondary">@color/sr_white</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/sr_primary</item>
+        <!-- Background -->
+        <item name="android:windowBackground">@color/sr_background</item>
     </style>
 
     <style name="Theme.Wirdago" parent="Base.Theme.Wirdago" />

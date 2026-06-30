@@ -14,9 +14,10 @@ import com.example.wirda_go.Profile.ProfileFragment
 import com.example.wirda_go.databinding.ActivityBaseBinding
 
 class BaseActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityBaseBinding
-    override fun onCreate(savedInstanceState: Bundle?) {
 
+    private lateinit var binding: ActivityBaseBinding
+
+    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         binding = ActivityBaseBinding.inflate(layoutInflater)
@@ -24,17 +25,18 @@ class BaseActivity : AppCompatActivity() {
 
         enableEdgeToEdge()
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+        ViewCompat.setOnApplyWindowInsetsListener(binding.root) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, 0)
             insets
         }
 
-        /** FragmentHome sebagai fragment default */
+        // Load HomeFragment sebagai default
         replaceFragment(HomeFragment())
 
-        binding.bottomNavView.setOnItemSelectedListener {
-            when (it.itemId) {
+        // Bottom Navigation
+        binding.bottomNavView.setOnItemSelectedListener { item ->
+            when (item.itemId) {
                 R.id.home -> {
                     replaceFragment(HomeFragment())
                     true
@@ -55,7 +57,7 @@ class BaseActivity : AppCompatActivity() {
                     replaceFragment(DraftFragment())
                     true
                 }
-                else ->false
+                else -> false
             }
         }
     }
@@ -63,8 +65,6 @@ class BaseActivity : AppCompatActivity() {
     private fun replaceFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction()
             .replace(binding.fragmentContainer.id, fragment)
-            //.addToBackStack(null) -> ini kita nonaktifkan agar saat back langsung keluar aplikasi
             .commit()
     }
 }
-
